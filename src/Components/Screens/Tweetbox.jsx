@@ -68,8 +68,6 @@ function Tweetbox({ setToggleApiCall, toggleApiCall, post, characterCount, setCh
             size="2rem"
             onChange={handleChange}
           />
-          
-        <p className="character-counter">{characterCount}/280</p>
         </div>
         <input
 					id="image"
