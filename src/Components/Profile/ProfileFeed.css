@@ -1,0 +1,23 @@
+.feed-container {
+	overflow: scroll;
+	width: 50%;
+}
+
+.edit-profile {
+	display: flex;
+	flex-direction: row;
+}
+
+.tweed-title {
+	text-align: center;
+  font-size: 26px;
+  color:#417e26ed;
+  text-decoration: underline;
+  text-shadow: 4px;
+}
+
+.feed {
+	flex: 0.9;
+	border-right: 1px solid var(--twitter-background);
+	min-width: fit-content;
+}
