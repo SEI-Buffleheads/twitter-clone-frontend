@@ -13,7 +13,7 @@ function Widgets() {
 	let interval;
 
 	useEffect(() => {
-		const fetchCoinData = async () => {
+    const fetchCoinData = async () => {
 			interval = setInterval(() => updateCurrCoin(res.data), 3000);
 			let res = await axios.get(
 				"https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=300&page=1&sparkline=false",
