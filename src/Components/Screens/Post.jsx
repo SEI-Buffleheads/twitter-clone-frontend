@@ -25,46 +25,46 @@ function Post({ post, setPostID, postID }) {
 	}
 
 	return (
-		<div className="postoutside">
+		<div className='postoutside'>
 			{post != null && (
 				<>
 					{post.map((post, i) => (
-						<div key={i} className="post-container">
-							<div className="post">
+						<div key={i} className='post-container'>
+							<div className='post'>
 								<br></br>
-								<div className="username">{post.owner}</div>
+								<div className='username'>{post.owner}</div>
 								<br></br>
-								<div className="postText"></div>
+								<div className='postText'></div>
 								{post.text}
-								<div className="postText"></div>
-								<div className="postImageURL">
-									{post.title !== "Text" && (
+								<div className='postText'></div>
+								<div className='postImageURL'>
+									{post.title !== 'Text' && (
 										<>
-											<img className="image" src={post.title} alt="" />
+											<img className='postImg' src={post.title} alt='' />
 										</>
 									)}
 								</div>
 								<br></br>
-								<div className="buttonsContainer">
+								<div className='buttonsContainer'>
 									<Link to={`/Post/${post.id}`}>
 										<button
 											id={post.id}
 											onClick={sendPostID}
-											className="commentsButton">
+											className='commentsButton'>
 											Reply
 										</button>
 									</Link>
-									{post != null && post.owner === Cookies.get("userEmail") && (
+									{post != null && post.owner === Cookies.get('userEmail') && (
 										<>
 											<button
-												className="deletePostButton"
+												className='deletePostButton'
 												id={post.id}
 												onClick={doDelete}>
 												Delete Post
 											</button>
 										</>
 									)}
-									{post != null && post.owner === Cookies.get("userEmail") && (
+									{post != null && post.owner === Cookies.get('userEmail') && (
 										<>
 											<ModalEditTweet
 												editID={editID}
@@ -72,7 +72,7 @@ function Post({ post, setPostID, postID }) {
 												show={showEdit}
 											/>
 											<button
-												className="editPostButton"
+												className='editPostButton'
 												id={post.id}
 												onClick={doEdit}>
 												Edit Post
